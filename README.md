@@ -1,48 +1,78 @@
-The Project Recommendation System is a full-stack web application designed to help students find suitable academic projects based on their skills, interests, and preferred domains. The system uses a content-based filtering approach to match student profiles with relevant project ideas. It includes both student and admin modules, along with a secure authentication system and a well-structured backend API. The project is built using React for the frontend, Flask for the backend, and MySQL as the database.
+# Project Recommendation System
 
-Key Features
+A web application that helps students find projects based on their skills and preferences. Built with React (Frontend), Python (Backend), and Oracle DB (Database).
 
-Student login and authentication using JWT.
-User-friendly interface for entering skills, domains, and preferences.
-Personalized project recommendations generated through a scoring and keyword-matching algorithm.
-Admin dashboard to add, update, or delete project records.
-Fully integrated REST APIs for smooth communication between frontend and backend.
-Error handling, data validation, and responsive UI.
+## Features
 
-Tech Stack
-Frontend: React.js, Axios, React Router
-Backend: Python Flask, Flask-CORS, Flask-JWT-Extended
-Database: MySQL with normalized schema and foreign keys
-Tools: Git, VS Code, Postman
+- **Student Profile Management**: Students can create profiles and add their skills with proficiency levels
+- **Project Browsing**: Browse through available projects with filtering and search
+- **Smart Recommendations**: Get personalized project recommendations based on skill matching
+- **Project Details**: View detailed information about each project including required skills and difficulty levels
 
-System Architecture
-The frontend interacts with the backend through REST API calls. The Flask backend processes incoming requests, applies the recommendation logic, and fetches or updates data in the MySQL database. The system follows a decoupled architecture, ensuring scalability and maintainability.
+## Tech Stack
 
-Setup Instructions
+- **Frontend**: React 18, React Router, Vite
+- **Backend**: Python (to be implemented)
+- **Database**: Oracle DB (to be implemented)
 
-Clone the repository.
-Set up and activate the backend environment, then install dependencies.
-Start the Flask server.
-Set up the frontend by installing npm packages and running the development server.
-Import the MySQL schema and seed data.
+## Getting Started
 
-Recommendation Logic
+### Prerequisites
 
-The recommendation algorithm uses content-based filtering. It compares student skills and domain preferences with project metadata, assigns weighted scores, ranks the projects, and returns the most relevant suggestions.
+- Node.js (v16 or higher)
+- npm or yarn
 
-Testing Conducted
+### Installation
 
-Unit testing for frontend components
-API endpoint testing
-Database CRUD validation
-Authentication and token validation
-Recommendation accuracy checks
+1. Install dependencies:
+```bash
+npm install
+```
 
-Deliverables
+2. Start the development server:
+```bash
+npm run dev
+```
 
-Fully functional frontend
-Flask backend with APIs
-MySQL database schema
-Admin and student modules
-Recommendation algorithm
-Documentation and testing records
+3. Open your browser and navigate to `http://localhost:3000`
+
+## Project Structure
+
+```
+├── src/
+│   ├── components/      # Reusable components
+│   │   ├── Navbar.jsx
+│   │   └── ProjectCard.jsx
+│   ├── pages/          # Page components
+│   │   ├── Home.jsx
+│   │   ├── StudentProfile.jsx
+│   │   ├── Projects.jsx
+│   │   ├── ProjectDetails.jsx
+│   │   └── Recommendations.jsx
+│   ├── App.jsx          # Main app component
+│   ├── main.jsx         # Entry point
+│   └── index.css        # Global styles
+├── package.json
+└── vite.config.js
+```
+
+## Pages
+
+- **Home**: Landing page with overview and features
+- **Profile**: Student profile creation and skill management
+- **Projects**: Browse all available projects
+- **Recommendations**: Personalized project recommendations
+- **Project Details**: Detailed view of individual projects
+
+## Database Design
+
+See `database_design.md` for complete database schema and table structures.
+
+## Future Enhancements
+
+- Backend API integration
+- Database connectivity
+- User authentication
+- Project reviews and ratings
+- Advanced recommendation algorithms
+
